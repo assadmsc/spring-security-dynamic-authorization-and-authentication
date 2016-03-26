@@ -3,6 +3,8 @@ Avoid intercept url pattern and access dynamically by using sql query in spring 
 
 use sql query for retriving roles of the requested URL. Generally we use intercept tag in xml along with url and roles attributes. we can avoid this tag and we can retrive those information form db.
 
+To run this minimum tomcat 7 required
+
 you also found custom UserDetailsService implementaion for getting authentication.
 
 <b>Steps</b>
