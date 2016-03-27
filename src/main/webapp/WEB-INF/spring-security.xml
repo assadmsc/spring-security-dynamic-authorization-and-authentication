@@ -8,6 +8,7 @@
 			http://www.springframework.org/schema/security/spring-security-3.2.xsd">
 	
 	<!-- This is where we configure Spring-Security  -->
+<!-- 	<security:http pattern="/resources/**" security="none"/> -->
 	<security:http  access-denied-page="/denied">
 		<security:form-login 
 				login-page="/login" 

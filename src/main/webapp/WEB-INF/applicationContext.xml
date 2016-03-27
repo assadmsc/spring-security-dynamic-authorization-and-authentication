@@ -36,6 +36,7 @@
 	
 	
 	<!-- resources mapping -->
+	<mvc:resources mapping="/resources/**" location="/resources/" cache-period="31556926"/>
 	<mvc:resources mapping="/assets/**" location="/assets/" />
 	<bean id="propertyPlaceholder"
 		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
