@@ -38,7 +38,7 @@ public class LoggedUser implements UserDetails{
 
 	public String getUsername() {
 		// TODO Auto-generated method stub
-		return user.getPassword();
+		return user.getUsername();
 	}
 
 	public boolean isAccountNonExpired() {

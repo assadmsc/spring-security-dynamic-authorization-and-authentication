@@ -38,6 +38,13 @@
 	
 	<!-- Authentication Manger config -->
 	<security:authentication-manager alias="authenticationManager">
-		<security:authentication-provider user-service-ref="authenticationService"/>
+		<security:authentication-provider user-service-ref="authenticationService">
+			<security:password-encoder ref="encoder"/>
+		</security:authentication-provider>
 	</security:authentication-manager>
+	
+	<bean id="encoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder">
+		<constructor-arg name="strength" value="10" />
+	</bean>
+	
 </beans>
