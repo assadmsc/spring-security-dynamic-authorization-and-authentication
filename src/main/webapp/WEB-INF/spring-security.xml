@@ -12,11 +12,14 @@
 		<security:form-login 
 				login-page="/login" 
 				authentication-failure-url="/login?failed=true" 
-				default-target-url="/dashboard" always-use-default-target="true"/>
+				default-target-url="/dashboard" always-use-default-target="true"/><!-- always-use-default-target="true" -->
 		<security:custom-filter ref="filter" before="FILTER_SECURITY_INTERCEPTOR" />
 		<security:logout invalidate-session="true" logout-success-url="/login"/>
-		 
+		<security:session-management>
+			<security:concurrency-control max-sessions="1" expired-url="/login?expired" session-registry-alias="sessionRegistry"/>
+		</security:session-management> 
 	</security:http>
+	<bean id="sessionRegistry" class="org.springframework.security.core.session.SessionRegistryImpl"/>
 	
 	<bean id="filter" class="org.springframework.security.web.access.intercept.FilterSecurityInterceptor">
 	<property name="authenticationManager" ref="authenticationManager"/>

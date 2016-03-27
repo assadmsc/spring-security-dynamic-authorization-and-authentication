@@ -9,6 +9,8 @@
 <body>
 <h2>DashBoard accessed for both USER and ADMIN roles.</h2><br>
 <h4>Your role is :${roles}</h4>
+<h4>Your user agent is :${useragent}</h4>
+<h4>Your session id is :${sessionId}</h4>
 <a href="j_spring_security_logout"> Logout</a>
 <br>
 -------------------------
