@@ -68,16 +68,16 @@ insert  into `role_action`(`ID`,`ROLE_ID`,`ACTION_ID`) values (7,2,3);
 CREATE TABLE `user` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
   `USERNAME` varchar(50) DEFAULT NULL,
-  `PASSWORD` varchar(50) DEFAULT NULL,
+  `PASSWORD` varchar(60) DEFAULT NULL,
   PRIMARY KEY (`ID`),
   UNIQUE KEY `USERNAME` (`USERNAME`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 /*Data for the table `user` */
 
-insert  into `user`(`ID`,`USERNAME`,`PASSWORD`) values (1,'assad','aaa');
-insert  into `user`(`ID`,`USERNAME`,`PASSWORD`) values (2,'zaman','zzz');
-insert  into `user`(`ID`,`USERNAME`,`PASSWORD`) values (4,'ruhi','rrr');
+insert  into `user`(`ID`,`USERNAME`,`PASSWORD`) values (1,'assad','$2a$10$Y10/PICYYKkMrWXFiq09FudnE4BFlWW9JKQ7/6/y2s0bEpFDhMAQO');
+insert  into `user`(`ID`,`USERNAME`,`PASSWORD`) values (2,'zaman','$2a$10$kqutufz0ykHVLDkgtV26WuDE3xXw3G5SlTtWl2fYpesN0Tm2J5AHS');
+insert  into `user`(`ID`,`USERNAME`,`PASSWORD`) values (4,'ruhi','$2a$10$EHJdRbedSgU3VPUWmIEqCu96AWV5GkxYZrPV.WtR4BcEEhcheDh8W');
 
 /*Table structure for table `user_role` */
 
