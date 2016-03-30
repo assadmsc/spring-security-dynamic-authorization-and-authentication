@@ -75,9 +75,9 @@ CREATE TABLE `user` (
 
 /*Data for the table `user` */
 
-insert  into `user`(`ID`,`USERNAME`,`PASSWORD`) values (1,'srinivas','srinivas');
-insert  into `user`(`ID`,`USERNAME`,`PASSWORD`) values (2,'rajesh','rajesh');
-insert  into `user`(`ID`,`USERNAME`,`PASSWORD`) values (4,'ben','ben');
+insert  into `user`(`ID`,`USERNAME`,`PASSWORD`) values (1,'assad','aaa');
+insert  into `user`(`ID`,`USERNAME`,`PASSWORD`) values (2,'zaman','zzz');
+insert  into `user`(`ID`,`USERNAME`,`PASSWORD`) values (4,'ruhi','rrr');
 
 /*Table structure for table `user_role` */
 
