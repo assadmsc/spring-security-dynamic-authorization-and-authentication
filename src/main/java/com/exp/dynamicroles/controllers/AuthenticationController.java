@@ -18,6 +18,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.exp.dynamicroles.util.SpringUserPrincipal;
+
 @Controller
 public class AuthenticationController {
 
@@ -27,6 +29,9 @@ public class AuthenticationController {
 	
 	@RequestMapping(value = "/login")
 	public String login() {
+		
+		SpringUserPrincipal.getUserPrincipal();
+		
 		return "login";
 	}
 	
@@ -56,6 +61,9 @@ public class AuthenticationController {
 			
 			
 		}
+		
+		SpringUserPrincipal.getUserPrincipal();
+		
 		
 		model.addAttribute("sessionList",sessionCollection);
 		System.out.println();
